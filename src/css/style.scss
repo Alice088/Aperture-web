@@ -1,0 +1,671 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+$font-Poppin: "Poppins", sans-serif;
+
+$color-white: #ffffff;
+$color-black: #181818;
+$color-very-black: #000;
+$color-gray: #c0c0c0;
+
+body {
+  background-color: $color-very-black;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.button {
+  color: $color-white;
+  font-family: $font-Poppin;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  margin-right: 70px;
+  padding: 10px;
+  border-radius: 14px;
+
+  transition: 200ms ease-in-out;
+  transition-property: background-color color;
+
+  &:hover {
+    background-color: $color-white;
+    color: $color-black;
+  }
+}
+
+.PhotoInfo {
+  display: flex;
+  flex-direction: row;
+  align-self: end;
+  gap: 12px;
+
+  img {
+    width: 32px;
+    height: 16px;
+    align-self: center;
+  }
+
+  strong {
+    color: $color-white;
+    font-family: $font-Poppin;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 12px;
+    align-self: center;
+  }
+}
+
+.List {
+  p {
+    color: $color-gray;
+    font-family: $font-Poppin;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    width: 143px;
+    order: 1;
+  }
+
+  ul li {
+    color: $color-white;
+    font-family: $font-Poppin;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    width: 149px;
+    border-radius: 5px;
+    padding: 5px;
+    padding-left: 1px;
+    margin: 2px;
+    transition: 200ms ease-in-out;
+    transition-property: background-color color;
+
+    &:hover {
+      background-color: $color-white;
+      color: $color-very-black;
+      cursor: pointer;
+    }
+  }
+}
+
+.button--white {
+  color: $color-black;
+  background-color: $color-white;
+  font-family: $font-Poppin;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  margin-right: 70px;
+  padding: 10px;
+  border-radius: 14px;
+
+  transition: 200ms ease-in-out;
+  transition-property: background-color color;
+
+  &:hover {
+    background-color: $color-gray;
+  }
+}
+
+.link {
+  display: flex;
+  background-color: $color-white;
+  width: 143px;
+  height: 42px;
+  border-radius: 14px;
+  padding: 4px;
+  align-items: center;
+  justify-content: space-around;
+
+  img {
+    border-radius: 20px;
+  }
+
+  a {
+    color: $color-very-black;
+    font-family: $font-Poppin;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0.4px;
+  }
+
+  &:hover {
+    background-color: $color-gray;
+    cursor: pointer;
+  }
+}
+
+.Header {
+  display: flex;
+  height: 90px;
+  background-color: $color-black;
+  align-items: center;
+  justify-content: space-between;
+
+  img {
+    width: 128px;
+    height: 31px;
+    margin-left: 250px;
+  }
+}
+
+.Banner {
+  display: grid;
+  grid-template-rows: repeat(16, 60px);
+  grid-template-columns: repeat(31, 64px);
+  margin-bottom: 113px;
+
+  img {
+    width: 100%;
+    grid-column: 1 / 31;
+    grid-row: 1 / 14;
+    z-index: 0;
+  }
+
+  strong {
+    color: $color-gray;
+    text-align: center;
+    align-self: end;
+    font-family: $font-Poppin;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    grid-column: 14 / 19;
+    grid-row: 9 / 10;
+
+    z-index: 1;
+  }
+
+  h2 {
+    color: $color-white;
+    text-align: center;
+    font-family: $font-Poppin;
+    font-size: 54px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 59.4px;
+
+    grid-column: 12 / 21;
+    grid-row: 10 / 11;
+
+    z-index: 1;
+  }
+
+  p {
+    color: $color-gray;
+    text-align: center;
+    align-self: center;
+    font-family: $font-Poppin;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+
+    grid-column: 12 / 21;
+    grid-row: 11 / 13;
+
+    z-index: 1;
+  }
+
+  div {
+    grid-column: 24 / 30;
+    grid-row: 15 / 16;
+    z-index: 1;
+  }
+}
+
+#WeDoBlock {
+  display: grid;
+  height: 1411px;
+  color: $color-white;
+  grid-template-columns: repeat(31, 64px);
+  grid-template-rows: repeat(22, 64px);
+
+  .WeDoPlaceOfPhoto {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    height: 1216px;
+    width: 1168px;
+    justify-self: center;
+    gap: 16px;
+
+    grid-column: 1 / 31;
+  }
+
+  h2 {
+    color: $color-white;
+    text-align: center;
+    font-family: $font-Poppin;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 42px;
+
+    grid-column: 14 / 18;
+    grid-row: 1 / 2;
+  }
+
+  p {
+    color: $color-gray;
+    text-align: center;
+    font-family: $font-Poppin;
+    font-size: 23px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+
+    grid-column: 12 / 20;
+  }
+
+  .PhotoTemplateWeDo {
+    display: grid;
+    grid-template-columns: 30px repeat(9, 61px);
+    grid-template-rows: repeat(10, 61px);
+    overflow: hidden;
+
+    img {
+      grid-column: 1 / 11;
+      transition: 0.5s ease-in-out;
+
+      z-index: 0;
+    }
+
+    strong {
+      color: $color-white;
+      font-family: $font-Poppin;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 20px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      align-self: flex-start;
+      z-index: 1;
+    }
+
+    p {
+      color: $color-gray;
+      font-family: $font-Poppin;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 20px;
+      text-align: start;
+      z-index: 1;
+    }
+
+    .link {
+      align-self: flex-start;
+
+      z-index: 1;
+    }
+
+    .PhotoTemplateWeDo__textAndButtom {
+      display: flex;
+      flex-direction: column;
+      align-content: start;
+      justify-content: space-evenly;
+
+      grid-column: 2 / 10;
+      grid-row: 6 / 11;
+    }
+
+    &:hover {
+      .blurPhoto {
+        transform: scale(1.1, 1.1);
+        filter: blur(6px);
+      }
+    }
+  }
+}
+
+.BigPhotoTemplate {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+  height: 700px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: start;
+
+  strong {
+    color: $color-white;
+    font-family: $font-Poppin;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    align-self: end;
+
+    grid-row: 4 / 5;
+    grid-column: 8 / 10;
+  }
+
+  p {
+    color: $color-gray;
+    font-family: $font-Poppin;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+
+    grid-row: 5 / 6;
+    grid-column: 8 / 10;
+  }
+
+  div {
+    grid-row: 10 /11;
+    grid-column: 8 / 11;
+    align-self: center;
+    justify-self: center;
+  }
+}
+
+.ToolsWeUseBlock {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 540px;
+
+  .ToolsWeUseBlock__description {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-self: center;
+    margin-left: 100px;
+
+    p:nth-child(1) {
+      color: $color-gray;
+      font-family: $font-Poppin;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 20px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    strong {
+      color: $color-white;
+      font-family: $font-Poppin;
+      font-size: 28px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 32px;
+    }
+
+    p:nth-child(3) {
+      color: $color-white;
+      font-family: $font-Poppin;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 20px;
+      width: 700px;
+    }
+  }
+
+  .ToolsWeUseBlock__photo {
+    display: flex;
+    justify-content: end;
+    padding: 45px;
+  }
+}
+
+.Clients {
+  display: flex;
+  flex-direction: column;
+  height: 500px;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+
+  strong {
+    color: $color-white;
+    text-align: center;
+    font-family: $font-Poppin;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 42px;
+    width: 229px;
+  }
+
+  p {
+    color: $color-gray;
+    text-align: center;
+    font-family: $font-Poppin;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+    width: 441px;
+  }
+
+  .Clients__icons {
+    display: flex;
+    gap: 190px;
+    margin-top: 50px;
+  }
+}
+
+.HelpPhotographyBlock {
+  height: 414px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+
+  strong {
+    width: 571px;
+    color: $color-white;
+    text-align: center;
+    font-family: $font-Poppin;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 42px;
+  }
+
+  p {
+    width: 224px;
+    color: $color-gray;
+    text-align: center;
+    font-family: $font-Poppin;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+  }
+}
+
+.Footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 452px;
+  padding-left: 136px;
+  padding-right: 136px;
+  margin-bottom: 20px;
+
+  .Footer__Lists {
+    display: grid;
+    grid-template-columns: 50% repeat(2, 1fr);
+    grid-template-rows: repeat(10, 23.5px);
+    height: 236px;
+
+    .List:nth-of-type(1) {
+      display: flex;
+      justify-self: end;
+      flex-direction: column;
+      grid-column: 2 / 3;
+
+      p {
+        order: 0;
+      }
+    }
+
+    .List {
+      width: 182px;
+
+      p {
+        text-align: start;
+        margin-bottom: 5px;
+      }
+
+      ul li {
+        text-align: start;
+      }
+    }
+
+    .List:nth-of-type(2) {
+      display: flex;
+      justify-self: start;
+      flex-direction: column;
+      grid-column: 3 / 4;
+
+      p {
+        order: 0;
+      }
+
+      ul li {
+        width: 200px;
+      }
+    }
+
+    img {
+      width: 128px;
+      height: 31px;
+
+      grid-column: 1 / 2;
+      grid-row: 1 / 2;
+    }
+
+    strong {
+      color: $color-gray;
+      font-family: $font-Poppin;
+      font-size: 13px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 20px;
+
+      grid-column: 1 / 2;
+      grid-row: 2 / 3;
+    }
+  }
+
+  .Footer__Email {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 142px;
+
+    border-bottom: 2px solid $color-white;
+    border-top: 2px solid $color-white;
+
+    form {
+      display: flex;
+      flex-direction: column;
+      grid-column: 2 / 3;
+      align-self: center;
+      justify-self: end;
+      transition: 600ms ease-in-out;
+
+      p {
+        display: none;
+        margin-top: 5px;
+        text-align: center;
+        color: $color-white;
+        font-family: $font-Poppin;
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20px;
+      }
+
+      #emailOfFooter {
+        width: 458px;
+        height: 52px;
+        border-radius: 12px;
+        border: 1px solid $color-white;
+        background: $color-white;
+
+        text-align: center;
+        color: $color-very-black;
+        font-family: $font-Poppin;
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20px;
+
+        background-repeat: no-repeat;
+      }
+    }
+
+    div {
+      display: flex;
+      flex-direction: column;
+      grid-column: 1 / 2;
+      gap: 20px;
+      align-self: center;
+
+      strong {
+        width: 280px;
+        color: $color-white;
+        font-family: $font-Poppin;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+      }
+
+      p {
+        width: 224px;
+        color: $color-gray;
+        font-family: $font-Poppin;
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20px;
+      }
+    }
+  }
+
+  .Footer__RightsAndIcons {
+    height: fit-content;
+    display: flex;
+    justify-content: space-between;
+
+    strong {
+      color: $color-gray;
+      font-family: $font-Poppin;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 20px;
+    }
+
+    div {
+      display: flex;
+      gap: 20px;
+    }
+  }
+}
